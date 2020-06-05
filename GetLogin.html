@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<!-- saved from url=(0045)https://assistant.sophie.chat/atmp/ChatterWeb -->
+<html style="" class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms no-csstransforms3d csstransitions fontface no-generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; utf-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Virtual Assistant</title>
+    <!--SEO TAGS-->
+    <meta name="description" content="Crie o seu chatbot com a mais robusta plataforma de chatbots">
+    <meta name="keywords" content="chatbots, chatbots, inteligência artificial, Sophie, atendimento, digital, agente, virtual, BI, assistente virtual, Woopi, Stefanini">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Sophie assistente virtual">
+    <meta property="og:description" content="Crie o seu chatbot com a mais robusta plataforma de chatbots">
+    <meta property="og:url" content="https://portal.parli.com.br">
+    <meta property="og:site_name" content="Portal da Sophie.">
+    <meta property="og:image" content="/Content//images/logo-sophie-card.jpg">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Sophie assistente virtual">
+    <meta name="twitter:description" content="Crie o seu chatbot com a mais robusta plataforma de chatbots">
+    <meta name="twitter:image" content="/Content//images/logo-sophie-card.jpg">
+    <link rel="shortcut icon" href="https://assistant.sophie.chat/Content//images/favicon.png" type="image/x-icon">
+    <link href="./font-awesome.min.css" rel="stylesheet">
+    <link href="./css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./custom.css">
+    <script src="./js"></script>
+
+    <script src="./bootstrap.min.js"></script>
+</head>
+<body style="">
+    <header>
+            <div class="headerpanel" id="topbar" style="border-bottom: 1px solid #00bfcf; width: 100%; position: fixed;">
+                <div class="row">
+                    <div class="col-xs-2">
+                        <div class="imgblock">
+                            <div class="avatar-chat"></div>
+                            <!--<img src="/Content//images/avatar-sophie.png" alt="" class="img-circle center-block avatar-sm">-->
+                            <span class="user-online-status"></span>
+                            <span class="user-online-status-lg"></span>
+                        </div>
+                    </div>
+                    <div class="col-xs-3 hidden-xs" style="position: relative; right: 84px;">
+                        <h4 class="text-left"> MP Express</h4>
+                        <h6 id="h6TitleChatter" class="text-left">Assistente Virtual</h6>
+                    </div>
+                    <div class="col-xs-3 hidden-sm hidden-md hidden-lg" style="position: relative; right: 16px;">
+                        <h4 class="text-left tela-xs">MP Express</h4>
+                        <h6 class="text-left tela-xs">Virtual Assistant</h6>
+                    </div>
+                    <div class="col-xs-2">
+                        <!-- <img src="/Content//images/logo-sophie.png" class="center-block logosophie" alt="" style="position: relative; right: 30px;"> -->
+                        <div class="logobackg" alt=""></div>
+                    </div>
+                    <div class="col-xs-5">
+                        <a href="https://assistant.sophie.chat/atmp/Login/Logoff" class="btnLogoff">
+                            <h4 class="text-right pull-right saida" onclick="">
+                                <i class="glyphicon glyphicon-log-out"></i>
+                            </h4>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+    
+    
+
+
+
+<script src="./Chatter"></script>
+
+
+<script type="text/javascript">
+    var chatter= {"sessionId":"58ebe19d7652ea11823aad32f6f4718100637257713705885581445175127","systemName":"MP Express","userLanguage":"pt","userText":null,"botText":null,"uploadFileParameters":{"filesWithoutScroll":"7","fileMaxSize":"5242880","fileMaxQty":"10","fileMaxAttempt":"3","fileMaxSizeError":"File(s) are over the size limit of: ","fileMaxQtyError":"\"Maximum files allowed: ","fileAttemptAlert":"","msgUploadSucess":"filesuploadedsuccessfully","msgFileNotSent":"filesnotsent"},"userInfo":{"customerId":null,"email":null,"tpUser":null,"userName":"visitante","password":null}};
+    var printer = new MessagePrinter("#pnlHistory");
+    var controller = new ChatterController(chatter, printer);
+    var rootDir = "/";
+    var contentDir = "/Content/"
+
+
+
+    var translation = {"en":{"send":"SEND","title":"Virtual Assistant","questionPlaceHolder":"Type a message","language":"Language:","isWriting":" is writing...","pleaseType":"Please type your message below","sending":"Sending...","isOffline":" is OFFLINE.","selectFile":"Select File","selectFiles":"Select Files","sendFile":"Send File","sendFiles":"Send Files","cancel":"Cancel","sendingFiles":"Sending Files","sendQuestions":"Send Questions","usersConnected":"Users connected:","welcome":"Welcome","login":"LOGIN","forgotPassword":"FORGOT YOUR PASSWORD?","resetPassword":"RESET PASSWORD","enterUserName":"Enter your user name","enterPassword":"Enter your password","invalidUser":"Invalid username or password","googleLogin":"Google Login"},"pt":{"send":"Enviar","title":"Assistente Virtual","questionPlaceHolder":"Digite sua mensagem","language":"Idioma:","isWriting":" está escrevendo...","pleaseType":"Por favor digite sua mensagem abaixo","sending":"Enviando...","isOffline":" está OFFLINE.","selectFile":"Selecionar Arquivo","selectFiles":"Selecionar Arquivos","sendFile":"Enviar Arquivo","sendFiles":"Enviar Arquivos","cancel":"Cancelar","sendingFiles":"Enviando Arquivos","sendQuestions":"Enviar Perguntas","usersConnected":"Usuários conectados:","welcome":"Bem-vindo","login":"ENTRAR","forgotPassword":"ESQUECEU SUA SENHA?","resetPassword":"REDEFINIR SENHA","enterUserName":"Digite seu usuário","enterPassword":"Digite sua senha","invalidUser":"Usuário ou senha Inválidos","googleLogin":"Google Login"},"es":{"send":"Enviar","title":"Asistente Virtual","questionPlaceHolder":"Escribe tu mensaje","language":"Idioma:","isWriting":" esta escribiendo...","pleaseType":"Por favor escriba su mensaje a continuación","sending":"Enviando...","isOffline":" es OFFLINE.","selectFile":"Seleccione Archivo","selectFiles":"Seleccione Archivos","sendFile":"Enviar Archivo","sendFiles":"Enviar Archivos","cancel":"Cancelar","sendingFiles":"Enviando Archivos","sendQuestions":"Enviar preguntas","usersConnected":"Usuarios conectados:","welcome":"Bienvenido","login":"Iniciar sesión","forgotPassword":" ¿Olvidaste tu contraseña?","resetPassword":"RESTABLECER LA CONTRASEÑA","enterUserName":"Ingresa tu usuario","enterPassword":"Ingresa tu contraseña","invalidUser":"Usuario o contraseña invalido","googleLogin":"Google Login"},"fr":{"send":"Envoyer","title":"Assistant Virtuel","questionPlaceHolder":"Tapez votre message","language":"La langue:","isWriting":" est en train d\u0027écrire...","pleaseType":"Veuillez taper votre message ci-dessous","sending":"Envoi...","isOffline":" est OFFLINE.","selectFile":"Sélectionnez le fichier","selectFiles":"Sélectionnez les fichiers","sendFile":"Envoyer le fichier","sendFiles":"Envoyer les fichiers","cancel":"Cancel","sendingFiles":"Annuler","sendQuestions":"Envoyer des questions","usersConnected":"Utilisateurs connectés:","welcome":"Bienvenue","login":"S\u0027identifier","forgotPassword":"Mot de passe oublié?","resetPassword":"RÉINITIALISER LE MOT DE PASSE","enterUserName":"Entrez votre pseudo ici","enterPassword":"Tapez votre mot de passe","invalidUser":"Nom d\u0027utilisateur ou mot de passe invalide","googleLogin":"Google Login"},"zh-CHS":{"send":"发送","title":"虚拟助理","questionPlaceHolder":"输入您的消息","language":"语言:","isWriting":" 在写字...","pleaseType":"请在下面输入您的信息","sending":"发出...","isOffline":" 离线.","selectFile":"选择文件","selectFiles":"选择文件","sendFile":"发送文件","sendFiles":"发送文件","cancel":"取消","sendingFiles":"发送文件","sendQuestions":"发送问题","usersConnected":"用户连接:","welcome":"欢迎","login":"登录","forgotPassword":"忘记密码了吗？","resetPassword":"重设密码","enterUserName":"输入你的用户名","enterPassword":"输入您的密码","invalidUser":"用户名或密码无效","googleLogin":"Google Login"},"ar":{"send":"إرسال","title":"مساعد الظاهري","questionPlaceHolder":"اكتب رسالتك","language":"اللغة:","isWriting":"هو الكتابة...","pleaseType":"الرجاء كتابه رسالتك أدناه","sending":"إرسال...","isOffline":"غير متصل.","selectFile":"حدد ملف","selectFiles":"حدد الملفات","sendFile":"إرسال ملف","sendFiles":"إرسال الملفات","cancel":"إلغاء","sendingFiles":"إرسال الملفات","sendQuestions":"إرسال الأسئلة","usersConnected":"المستخدمين المتصلين:","welcome":"أهلا بك","login":"تسجيل الدخول","forgotPassword":"نسيت رقمك السري؟","resetPassword":"إعادة تعيين كلمة المرور","enterUserName":"أدخل اسم المستخدم الخاص بك","enterPassword":"ادخل رقمك السري","invalidUser":"خطأ في اسم المستخدم أو كلمة مرور","googleLogin":"Google Login"},"ko":{"send":"보내기","title":"가상 어시스턴트","questionPlaceholder":"메시지 입력","language":"언어:","isWriting":"쓰고 있다","pleaseType":"아래에 메시지를 입력 하십시오","sending":"보내는","isOffline":"가 오프 라인 상태입니다.","selectFile":"파일 선택","selectFiles":"파일 선택","sendFile":"파일 보내기","sendFiles":"파일 보내기","cancel":"취소","sendingFiles":"파일 보내기","sendQuestions":"질문 보내기","usersConnected":"사용자가 연결 되어:","welcome":"환영","login":"로그인","forgotPassword":"비밀번호를 잊어 버렸습니까?","resetPassword":"암호를 재설정","enterUserName":"사용자 이름을 입력하십시오.","enterPassword":"비밀 번호를 입력하십시오","invalidUser":"잘못된 사용자 이름 또는 비밀번호","googleLogin":"Google Login"},"ro":{"send":"TRIMITE","title":"Asistent Virtual","questionPlaceHolder":"Scrie un mesaj","language":"Limba:","isWriting":" scrie...","pleaseType":"Introduceți mesajul dvs. mai jos","sending":"Trimitere...","isOffline":" este OFFLINE","selectFile":"Selectați Fișier","selectFiles":"Selectati Fisierele","sendFile":"Trimite Fișier","sendFiles":"Trimite Fisierele","cancel":"Anulare","sendingFiles":"Trimiterea fișierelor","sendQuestions":"Trimite întrebări","usersConnected":"Utilizatorii conectați:","welcome":"Bine ati venit","login":"Logare","forgotPassword":"Ti-ai uitat parola?","resetPassword":"RESETEAZA PAROLA","enterUserName":"Introduceți numele de utilizator","enterPassword":"Introduceți parola","logoff":"Ieși din cont","invalidUser":"Nume de utilizator sau parola incorecte","googleLogin":"Google Login"}};
+
+    var userLang = navigator.language || navigator.userLanguage || navigator.languages;
+
+    if (userLang != "zh-CHS")
+        userLang = userLang.split("-")[0];
+
+    if (translation[userLang] == null)
+        userLang = "en";
+
+	/// Set fields with Core Language
+    controller.refreshLanguage();
+
+    var intervalId;
+    var receiveTimeout;
+
+    $(document).ready(function () {
+
+        $("#btnSend").click(function () {
+
+            var sendQuestion = $('#txtQuestion').val();
+            sendQuestion = sendQuestion.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+
+            //controller.sendMessage($('#txtQuestion').val(), $('#txtQuestion').val(), true);
+            controller.sendMessage(sendQuestion, sendQuestion, true);
+            $('#txtQuestion').val('');
+            return false;
+        });
+
+        controller.sendMessage('startup', 'startup', false);
+
+        //setInterval(function () { updateUsersConnected() }, ChatterClient.Properties.Settings.Default.usersCountRefreshTime);
+
+        receiveTimeout = function () {
+            $.ajax({
+                url: rootDir + "GetAnswer?id=" + chatter.sessionId,
+                cache: false,
+                success: function (data) {
+                    if (data!= null && data != "") {
+                        controller.receiveMessage(data);
+                    }
+                }
+            }).always(function () {
+                setTimeout(receiveTimeout, 100);
+                checkForAgent();
+            });
+        };
+
+        setTimeout(receiveTimeout, 10);
+    });
+
+    $(document).ajaxError(function (event, request, settings) {
+
+        if (request.status === 401) {
+            window.location.replace("./");
+        }
+    });
+
+    document.addEventListener("keydown", VerifyEnter);
+    function VerifyEnter(event) {
+        if (event.keyCode == 13 &&  event.shiftKey) {
+            var content = this.value;
+            var caret = getCaret(this);
+
+            if (content)
+                this.value = content.substring(0, caret) + "\n" + content.substring(caret, content.length - 1);
+
+            event.stopPropagation();
+        } else if (event.keyCode == 8) {
+            autoDecrease(event.target);
+        }
+        else if (event.keyCode == 13) {
+            event.preventDefault();
+
+            var sendQuestion = $('#txtQuestion').val();
+            sendQuestion = sendQuestion.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+
+
+            //controller.sendMessage($('#txtQuestion').val(), $('#txtQuestion').val(), true);
+            controller.sendMessage(sendQuestion, sendQuestion, true);
+
+            $('#txtQuestion').removeAttr("style");
+            //$('#txtQuestion').css('height','');
+            $('#txtQuestion').val('');
+            return false;
+        }
+    };
+
+    function getCaret(el) {
+        if (el.selectionStart) {
+            return el.selectionStart;
+        } else if (document.selection) {
+            el.focus();
+
+            var r = document.selection.createRange();
+            if (r == null) {
+                return 0;
+            }
+
+            var re = el.createTextRange(),
+                rc = re.duplicate();
+            re.moveToBookmark(r.getBookmark());
+            rc.setEndPoint('EndToStart', re);
+
+            return rc.text.length;
+        }
+        return 0;
+    }
+
+    var autoExpand = function (field) {
+        // Reset field height
+        field.style.height = 'inherit';
+        // Get the computed styles for the element
+        var computed = window.getComputedStyle(field);
+        // Calculate the height
+        var height = parseInt(computed.getPropertyValue('border-top-width'), 10)
+            + parseInt(computed.getPropertyValue('padding-top'), 10)
+            + field.scrollHeight
+            + parseInt(computed.getPropertyValue('padding-bottom'), 10)
+            + parseInt(computed.getPropertyValue('border-bottom-width'), 10);
+
+        field.style.height = height + 'px';
+    };
+
+    var autoDecrease = function (field) {
+        field.style.height = 'inherit';
+        // Get the computed styles for the element
+        var computed = window.getComputedStyle(field);
+        // Calculate the height
+        var height = parseInt(computed.getPropertyValue('border-top-width'), 10)
+            - parseInt(computed.getPropertyValue('padding-top'), 10)
+            - field.scrollHeight
+            - parseInt(computed.getPropertyValue('padding-bottom'), 10)
+            - parseInt(computed.getPropertyValue('border-bottom-width'), 10);
+
+        field.style.height = height + 'px';
+    }
+
+    document.addEventListener('input', function (event) {
+        if (event.target.tagName.toLowerCase() !== 'textarea') return;
+            autoExpand(event.target);
+    }, false);
+
+    function RemovePlaceHolder() {
+        $('#txtQuestion').removeAttr('placeholder');
+    };
+
+    document.addEventListener("focusout", AddPlaceHolder);
+    function AddPlaceHolder() {
+        $('#txtQuestion').attr('placeholder', translation[controller.currentLanguage]['questionPlaceHolder']);
+    }
+
+    var idleTime = 600000;
+
+    //Handle idle event
+    $(document).bind("idle.idleTimer", function () {
+        controller.timeoutCall();
+    });
+
+    $(document).idleTimer(idleTime);
+
+    function updateUsersConnected(){
+        $.ajax({
+            url: rootDir + 'Chatter/GetActiveClientsCount', //?sessionId=' + this.chatter.sessionId + '&question=' + question,
+            method: "GET",
+            success: function (data, status) {
+                $('#usersConnected').text(translation[controller.currentLanguage]['usersConnected'] + ' ' + data);
+            }
+        });
+    }
+
+    function ToggleSuggestionBox(button) {
+        $(button).children("i").toggleClass("fa-caret-up");
+        $(button).children("i").toggleClass("fa-caret-down");
+        $(button).parent().toggleClass('closed');
+    }
+
+
+    //Altera tabamho da DIV
+    function AlteraTamanho() {
+        var Altura = document.getElementById('chatterDiv').style.minHeight;
+        document.getElementById('chatterDiv').style.height = Altura - document.getElementById('Panel2').sty.height;
+
+    }
+</script>
+
+<form method="post" id="form2" class="pure-form">
+
+    <div id="chatterDiv" class="chatter conteudo-tela" style="height: auto;">
+        <div id="pnlHistory" class="chat-box">
+        <div class="row left" style="margin-right: 0px"><div class="col-xs-11"><div class="bubble-left"><div style="display: inline-block; width: 80%;"><p class="bot-name">MP Express</p> <p>Bem-vindo! Somos a  MP Express, eu estou aqui para te ajudar.</p><p class="text-left txt-data">19:09</p></div></div></div></div></div>
+    </div>
+</form>
+
+<div class="container-fluid bottom-input" style="bottom: 0px; width: 100%;">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="panel-input" id="user-input">
+                <div class="panel-body" style="padding-top: 12px;">
+                    <div data-chatter="bot-status" style="color: white; font-size: 12px;" hidden="">Por favor digite sua mensagem abaixo</div>
+
+                    <textarea rows="1" onfocusin="RemovePlaceHolder()" onfocusout="AddPlaceHolder()" id="txtQuestion" data-chatter="user-question" maxlength="500" autocomplete="off" onkeypress="return VerifyEnter(event);" placeholder="" style="overflow: hidden; overflow-wrap: break-word;"></textarea>
+
+                    <img id="btnSend" class="img-responsive recuo send" src="./send-icon.svg" alt="" style="display: inline-block; width: 40px; cursor: pointer; padding-bottom: 10px;">
+                </div>
+            </div>
+            <p class="text-center" style="font-size: 16px; margin-top: 0; line-height: 50px;"> <a href="https://stefanini.com/" target="_blank" title="Ir para o site" alt="Ir para o site"> <img src="./powered-stefanininew.png" alt="Powered by Stefanini!" border="0"> </a></p>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    autosize(document.getElementById("txtQuestion"));
+
+    function startLiveAgent() {
+        controller.sendMessage('Stop', 'Stop', false, controller.currentLanguage, false);
+        controller.sendMessage('LiveAgentConnect', 'LiveAgentConnect', false, controller.currentLanguage);
+        showEndBtn();
+    }
+
+    function showEndBtn() {
+        $('#LiveAgentBtnStart').show();
+        $('#LiveAgentBtnStop').hide();
+    }
+
+    function stopLiveAgent() {
+        $.ajax({
+            method: "POST",
+            url: rootDir + 'disconnectAspect?SophieSessionID=' + chatter.sessionId ,
+            data: "",
+            success: function (data) {
+                controller.sendMessage('LiveAgentDisconnect', 'LiveAgentDisconnect', false, controller.currentLanguage);
+                showStartBtn();
+            }
+        });
+
+    }
+    function showStartBtn() {
+        $('#LiveAgentBtnStop').hide();
+        $('#LiveAgentBtnStart').show();
+    }
+
+    function checkForAgent() {
+        let liveAgentBtn = false;
+
+        if (liveAgentBtn === "true") {
+            $.ajax({
+                method:"POST",
+                url: rootDir + "GetContextValue?name=redirecttoliveagent&sessionId=" + chatter.sessionId,
+                cache: false,
+                success: function (data) {
+                    if (data != "true") {
+                        showStartBtn();
+                    }
+                    else
+                        showEndBtn();
+                }
+            });
+        }
+    }
+</script>
+
+
+</body></html>
